@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TagSelectionComponent } from './tag-selection.component';
 
 describe('TagSelectionComponent', () => {
@@ -8,9 +7,9 @@ describe('TagSelectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TagSelectionComponent ]
+      declarations: [TagSelectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

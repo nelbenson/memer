@@ -1,16 +1,16 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { ChatComponent } from './chat.component';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { ChatService } from '../../services';
 import { UserService } from '../../../core/services';
+import { ChatService } from '../../services';
+import { ChatComponent } from './chat.component';
+
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
   let fixture: ComponentFixture<ChatComponent>;
   const chatService = {
     gameId: '123',
-    init: () => {},
+    init: () => { },
     messages$: of([]),
     sendMessage: (_user, _message) => Promise.resolve()
   };
@@ -20,7 +20,7 @@ describe('ChatComponent', () => {
   beforeEach(async(() => {
 
     TestBed.configureTestingModule({
-      declarations: [ ChatComponent ],
+      declarations: [ChatComponent],
       providers: [
         {
           provide: ChatService,
@@ -32,7 +32,7 @@ describe('ChatComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
   }));
 

@@ -1,11 +1,11 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { HeaderComponent } from './header.component';
-import { UserService, ThemeService, Theme } from '../../../core/services';
-import { of } from 'rxjs';
-import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClarityModule } from '@clr/angular';
+import { of } from 'rxjs';
+import { Theme, ThemeService, UserService } from '../../../core/services';
+import { HeaderComponent } from './header.component';
+
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -16,8 +16,8 @@ describe('HeaderComponent', () => {
   const location = jasmine.createSpyObj('Location', ['go']);
   const themeService = {
     theme: Theme.LIGHT,
-    changeTheme: () => {},
-    setDark: () => {}
+    changeTheme: () => { },
+    setDark: () => { }
   };
 
   const userService = {
@@ -30,7 +30,7 @@ describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ClarityModule],
-      declarations: [ HeaderComponent ],
+      declarations: [HeaderComponent],
       providers: [
         {
           provide: UserService,
@@ -54,7 +54,7 @@ describe('HeaderComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

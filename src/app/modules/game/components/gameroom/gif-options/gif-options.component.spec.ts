@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { GifOptionsComponent } from './gif-options.component';
-import { Theme, ThemeService } from '../../../../core/services';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { Theme, ThemeService } from '../../../../core/services';
+import { GifOptionsComponent } from './gif-options.component';
+
 
 describe('GifOptionsComponent', () => {
   let component: GifOptionsComponent;
@@ -12,7 +12,7 @@ describe('GifOptionsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
-      declarations: [ GifOptionsComponent ],
+      declarations: [GifOptionsComponent],
       providers: [
         {
           provide: ThemeService,
@@ -20,7 +20,7 @@ describe('GifOptionsComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,9 +1,8 @@
-import { TestBed, inject, fakeAsync } from '@angular/core/testing';
-
-import { CaptionService } from './caption.service';
-import { of } from 'rxjs';
-import { Card } from '../../../interfaces';
+import { fakeAsync, inject, TestBed } from '@angular/core/testing';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { of } from 'rxjs';
+import { CaptionService } from './caption.service';
+
 
 describe('CaptionService', () => {
   const data = [

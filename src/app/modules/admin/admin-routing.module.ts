@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { DeckManagerComponent, AdminHomeComponent } from './components';
+import { RouterModule, Routes } from '@angular/router';
+import { AdminHomeComponent } from './components';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home' },

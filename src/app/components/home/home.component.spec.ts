@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { HomeComponent } from './home.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { UserService, GameService, SettingsService } from '../../modules/core/services';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { MomentModule } from 'ngx-moment';
-import { FromFBDatePipe } from '../../modules/shared/pipes';
-import { By } from '@angular/platform-browser';
-import { GameSetupComponent } from '../game-setup/game-setup.component';
 import { of } from 'rxjs';
 import { Game } from '../../interfaces';
+import { GameService, SettingsService, UserService } from '../../modules/core/services';
+import { FromFBDatePipe } from '../../modules/shared/pipes';
+import { GameSetupComponent } from '../game-setup/game-setup.component';
+import { HomeComponent } from './home.component';
+
 
 describe('HomeComponent', () => {
   const GAMES: Game[] = [
@@ -96,7 +96,7 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       schemas: [NO_ERRORS_SCHEMA],
       imports: [MomentModule],
-      declarations: [ HomeComponent, FromFBDatePipe, GameSetupComponent  ],
+      declarations: [HomeComponent, FromFBDatePipe, GameSetupComponent],
       providers: [
         {
           provide: UserService,
@@ -116,7 +116,7 @@ describe('HomeComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

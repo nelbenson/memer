@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { GameGuard } from './';
+import { ActivatedRouteSnapshot, Router } from '@angular/router';
 import { of } from 'rxjs';
-import { Router, ActivatedRoute, Params, ActivatedRouteSnapshot } from '@angular/router';
 import { GameService } from '../modules/core/services';
+import { GameGuard } from './';
 
 describe('AuthGuard', () => {
   let guard: GameGuard;

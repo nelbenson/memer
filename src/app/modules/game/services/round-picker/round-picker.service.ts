@@ -16,13 +16,13 @@ export class RoundPickerService {
   get standardRound() { return this.roundTypes.find(t => t.roundType === RoundType.Standard); }
 
   constructor() {
-   }
+  }
 
-   setChanceOfSpecialRound(chance: number) {
-     this.chanceOfSpecial = chance;
-   }
+  setChanceOfSpecialRound(chance: number) {
+    this.chanceOfSpecial = chance;
+  }
 
-   getRound() {
+  getRound() {
     const rand = Math.random();
     const isSpecial = rand < this.chanceOfSpecial;
     if (isSpecial) {
@@ -31,5 +31,5 @@ export class RoundPickerService {
       return this.specialRounds[randomIndex];
     }
     return this.standardRound;
-   }
+  }
 }

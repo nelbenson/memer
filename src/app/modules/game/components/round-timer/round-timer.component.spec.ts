@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { RoundTimerComponent } from './round-timer.component';
 import { Theme, ThemeService } from '../../../core/services';
 import { GiphyService } from '../../services';
+import { RoundTimerComponent } from './round-timer.component';
+
 
 describe('RoundTimerComponent', () => {
   let component: RoundTimerComponent;
@@ -16,7 +16,7 @@ describe('RoundTimerComponent', () => {
     giphyService.getWildcard.and.returnValue(Promise.resolve());
 
     TestBed.configureTestingModule({
-      declarations: [ RoundTimerComponent ],
+      declarations: [RoundTimerComponent],
       providers: [
         {
           provide: ThemeService,
@@ -28,7 +28,7 @@ describe('RoundTimerComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

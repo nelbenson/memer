@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { ThemeService, Theme } from '../../../../core/services';
+import { Theme, ThemeService } from '../../../../core/services';
 
 @Component({
   selector: 'memer-gif-options',

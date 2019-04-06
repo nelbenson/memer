@@ -15,7 +15,7 @@ describe('OnlinePlayerCountComponent', () => {
     });
 
     TestBed.configureTestingModule({
-      declarations: [ OnlinePlayerCountComponent ],
+      declarations: [OnlinePlayerCountComponent],
       providers: [
         {
           provide: AngularFireDatabase,
@@ -23,7 +23,7 @@ describe('OnlinePlayerCountComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

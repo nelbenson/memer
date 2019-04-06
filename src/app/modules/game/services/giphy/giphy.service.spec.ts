@@ -1,8 +1,7 @@
-import { TestBed, inject, fakeAsync, tick, getTestBed } from '@angular/core/testing';
-
-import { GiphyService } from './giphy.service';
-import { of } from 'rxjs';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { getTestBed, TestBed } from '@angular/core/testing';
+import { GiphyService } from './giphy.service';
+
 
 describe('GiphyService', () => {
   let injector: TestBed;

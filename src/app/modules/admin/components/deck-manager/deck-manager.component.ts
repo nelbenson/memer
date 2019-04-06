@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CaptionService } from '../../services/caption.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Card } from '../../../../interfaces';
 import { UserService } from '../../../core/services';
+import { CaptionService } from '../../services/caption.service';
 
 
 @Component({

@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GiphySearchComponent } from './giphy-search.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { GiphyService } from '../../../services';
+import { GiphySearchComponent } from './giphy-search.component';
+
 
 describe('GiphySearchComponent', () => {
   let component: GiphySearchComponent;
@@ -13,7 +13,7 @@ describe('GiphySearchComponent', () => {
     giphyService = jasmine.createSpyObj<GiphyService>('GiphyService', ['getPage']);
 
     TestBed.configureTestingModule({
-      declarations: [ GiphySearchComponent ],
+      declarations: [GiphySearchComponent],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         {
@@ -22,7 +22,7 @@ describe('GiphySearchComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

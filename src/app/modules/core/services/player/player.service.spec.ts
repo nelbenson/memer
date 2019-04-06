@@ -1,7 +1,7 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { PlayerService } from './player.service';
+import { inject, TestBed } from '@angular/core/testing';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { PlayerService } from './player.service';
+
 
 describe('PlayerService', () => {
   const afs = jasmine.createSpyObj('AngularFirestore', ['collection']);

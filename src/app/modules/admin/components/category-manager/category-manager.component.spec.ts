@@ -1,13 +1,13 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { CategoryManagerComponent } from './category-manager.component';
-import { CategoryService } from '../../../game/services';
-import {ClarityModule} from '@clr/angular';
-import { CategoryAddComponent } from '../category-add/category-add.component';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Category } from '../../../../interfaces';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ClarityModule } from '@clr/angular';
+import { Category } from '../../../../interfaces';
+import { CategoryService } from '../../../game/services';
+import { CategoryAddComponent } from '../category-add/category-add.component';
+import { CategoryManagerComponent } from './category-manager.component';
+
 
 describe('CategoryManagerComponent', () => {
   let component: CategoryManagerComponent;
@@ -22,14 +22,14 @@ describe('CategoryManagerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ClarityModule, ReactiveFormsModule, NoopAnimationsModule],
-      declarations: [ CategoryManagerComponent, CategoryAddComponent ],
+      declarations: [CategoryManagerComponent, CategoryAddComponent],
       providers: [
         {
           provide: CategoryService, useValue: categoryService
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     categoryService.getAll.and.returnValue(Promise.resolve(CATEGORIES));
     categoryService.add.and.callFake((cat: Category) => {

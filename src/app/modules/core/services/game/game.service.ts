@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAction } from 'angularfire2/firestore';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
-import { take, map, switchMap } from 'rxjs/operators';
-import { Game, Player, GameChanges, GameSettings } from '../../../../interfaces';
+import { map, switchMap } from 'rxjs/operators';
+import { Game, GameChanges, GameSettings, Player } from '../../../../interfaces';
 
 @Injectable({
   providedIn: 'root'

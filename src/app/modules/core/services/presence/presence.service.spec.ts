@@ -1,8 +1,8 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { PresenceService } from './presence.service';
+import { inject, TestBed } from '@angular/core/testing';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { PresenceService } from './presence.service';
+
 
 describe('PresenceService', () => {
   let angularfireDB: jasmine.SpyObj<AngularFireDatabase>;

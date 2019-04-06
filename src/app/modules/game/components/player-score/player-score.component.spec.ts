@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PlayerScoreComponent } from './player-score.component';
 import { ClarityModule } from '@clr/angular';
+import { PlayerScoreComponent } from './player-score.component';
+
 
 describe('PlayerScoreComponent', () => {
   let component: PlayerScoreComponent;
@@ -10,9 +10,9 @@ describe('PlayerScoreComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ClarityModule],
-      declarations: [ PlayerScoreComponent ]
+      declarations: [PlayerScoreComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

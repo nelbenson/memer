@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CaptionAddComponent } from './caption-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ClarityModule } from '@clr/angular';
+import { CaptionAddComponent } from './caption-add.component';
+
 
 describe('CaptionAddComponent', () => {
   let component: CaptionAddComponent;
@@ -10,10 +10,10 @@ describe('CaptionAddComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ ReactiveFormsModule, ClarityModule ],
-      declarations: [ CaptionAddComponent ]
+      imports: [ReactiveFormsModule, ClarityModule],
+      declarations: [CaptionAddComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

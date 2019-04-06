@@ -1,8 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ClrWizard } from '@clr/angular';
-import { Player } from '../../interfaces';
+import { GameSettings, Player } from '../../interfaces';
 import { GameService } from '../../modules/core/services';
-import { GameSettings } from '../../interfaces';
 
 @Component({
   selector: 'memer-game-setup',

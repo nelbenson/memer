@@ -1,9 +1,9 @@
-import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angular/core';
-import { Card, Meme } from '../../../../interfaces';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import * as firebase from 'firebase/app';
-import moment from 'moment';
 import sample from 'lodash/sample';
-import { ThemeService, Theme } from '../../../core/services';
+import moment from 'moment';
+import { Card, Meme } from '../../../../interfaces';
+import { Theme, ThemeService } from '../../../core/services';
 import { GiphyService } from '../../services';
 
 @Component({
@@ -22,7 +22,7 @@ export class RoundTimerComponent implements OnInit, OnDestroy {
   @Input() limit: number;
   @Input() reverseRound: boolean;
   @Input()
-  set memeTemplate (template: Meme) {
+  set memeTemplate(template: Meme) {
     if (!template) { return; }
     if (this.timestampDiff() > this.limit) { return; }
 

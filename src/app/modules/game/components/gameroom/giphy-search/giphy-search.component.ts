@@ -1,8 +1,8 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { debounceTime, filter, distinctUntilChanged, switchMap, combineLatest, tap } from 'rxjs/operators';
+import { combineLatest, debounceTime, distinctUntilChanged, filter, switchMap, tap } from 'rxjs/operators';
+import { Theme, ThemeService } from '../../../../core/services';
 import { GiphyService } from '../../../services';
-import { ThemeService, Theme } from '../../../../core/services';
 
 @Component({
   selector: 'memer-giphy-search',

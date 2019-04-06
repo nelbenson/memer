@@ -1,9 +1,9 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { DeckService } from './deck.service';
+import { inject, TestBed } from '@angular/core/testing';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { of } from 'rxjs';
 import { Card } from '../../../../interfaces';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { DeckService } from './deck.service';
+
 
 describe('DeckService', () => {
   const data: Card[][] = [[

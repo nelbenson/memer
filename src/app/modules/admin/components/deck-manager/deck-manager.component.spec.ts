@@ -1,12 +1,11 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { CaptionAddComponent, CaptionEditComponent, DeckManagerComponent } from '../';
-import { ClarityModule, ClrDatagridRowDetail, ClrDatagridRow } from '@clr/angular';
-import { CaptionService } from '../../services/caption.service';
-import { UserService } from '../../../core/services';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { detectChanges } from '@angular/core/src/render3';
+import { ClarityModule, ClrDatagridRow } from '@clr/angular';
+import { CaptionAddComponent, CaptionEditComponent, DeckManagerComponent } from '../';
+import { UserService } from '../../../core/services';
+import { CaptionService } from '../../services/caption.service';
+
 
 describe('DeckManagerComponent', () => {
   let component: DeckManagerComponent;
@@ -16,8 +15,8 @@ describe('DeckManagerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ ClarityModule, ReactiveFormsModule ],
-      declarations: [ DeckManagerComponent, CaptionAddComponent, CaptionEditComponent ],
+      imports: [ClarityModule, ReactiveFormsModule],
+      declarations: [DeckManagerComponent, CaptionAddComponent, CaptionEditComponent],
       providers: [
         {
           provide: CaptionService,
@@ -29,7 +28,7 @@ describe('DeckManagerComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     captionService.getAll.and.returnValue(Promise.resolve([
       { id: '1', top: 'CARD TOP 1', bottom: 'CARD BOTTOM 1' },

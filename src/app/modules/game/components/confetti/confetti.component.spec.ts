@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ConfettiComponent } from './confetti.component';
+
 
 describe('ConfettiComponent', () => {
   let component: ConfettiComponent;
@@ -8,9 +8,9 @@ describe('ConfettiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConfettiComponent ]
+      declarations: [ConfettiComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

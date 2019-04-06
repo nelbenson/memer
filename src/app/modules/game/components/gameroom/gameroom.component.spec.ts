@@ -1,14 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { GameroomComponent } from './gameroom.component';
-import { ClarityModule } from '@clr/angular';
 import { NO_ERRORS_SCHEMA, Renderer2 } from '@angular/core';
-import { ActivePlayersPipe, CurrentUserPipe, ShufflePipe } from '../../pipes';
-import { UserService, PlayerService, Theme, ThemeService, GameService } from '../../../core/services';
-import { CategoryService, ChatService, DeckService, GiphyService, RoundPickerService } from '../../services';
-import { Router, ActivatedRoute } from '@angular/router';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
 import { of } from 'rxjs';
 import { Game } from '../../../../interfaces';
+import { GameService, PlayerService, Theme, ThemeService, UserService } from '../../../core/services';
+import { ActivePlayersPipe, CurrentUserPipe, ShufflePipe } from '../../pipes';
+import { CategoryService, ChatService, DeckService, GiphyService, RoundPickerService } from '../../services';
+import { GameroomComponent } from './gameroom.component';
+
 
 describe('GameroomComponent', () => {
   let component: GameroomComponent;
@@ -142,7 +142,7 @@ describe('GameroomComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

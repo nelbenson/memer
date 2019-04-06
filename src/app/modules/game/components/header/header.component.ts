@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router/';
-import { Theme, UserService, ThemeService } from '../../../core/services';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router/';
+import { Theme, ThemeService, UserService } from '../../../core/services';
 
 @Component({
   selector: 'memer-header',

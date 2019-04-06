@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MemeComponent } from './meme.component';
 
 describe('MemeComponent', () => {
@@ -8,9 +7,9 @@ describe('MemeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MemeComponent ]
+      declarations: [MemeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

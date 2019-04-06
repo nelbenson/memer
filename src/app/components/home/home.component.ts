@@ -1,10 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subject, BehaviorSubject } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GameService, UserService, SettingsService } from '../../modules/core/services';
-import { Game } from '../../interfaces/Game';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Player } from '../../interfaces';
+import { Game } from '../../interfaces/Game';
+import { GameService, SettingsService, UserService } from '../../modules/core/services';
 
 @Component({
   selector: 'memer-home',

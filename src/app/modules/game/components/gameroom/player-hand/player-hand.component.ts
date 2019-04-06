@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
 import { Card } from '../../../../../interfaces';
-import { ThemeService, Theme } from '../../../../core/services';
+import { Theme, ThemeService } from '../../../../core/services';
 
 @Component({
   selector: 'memer-player-hand',

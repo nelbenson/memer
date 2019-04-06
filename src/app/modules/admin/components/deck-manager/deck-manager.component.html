@@ -1,7 +1,8 @@
 <h3 class="heading">CAPTION MANAGER</h3>
 <div class="row flex-items-xs-center">
   <div>
-    <memer-caption-add *ngIf="showingNewCardForm" (save)="add($event)" (cancel)="showAddForm(false)"></memer-caption-add>
+    <memer-caption-add *ngIf="showingNewCardForm" (save)="add($event)" (cancel)="showAddForm(false)">
+    </memer-caption-add>
     <button *ngIf="!showingNewCardForm" (click)="showAddForm(true)" class="btn btn-primary">ADD CARD</button>
   </div>
 </div>

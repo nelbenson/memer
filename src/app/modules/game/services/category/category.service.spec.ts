@@ -1,9 +1,9 @@
-import { TestBed, inject, getTestBed } from '@angular/core/testing';
-
-import { CategoryService } from './category.service';
-import { of } from 'rxjs';
+import { getTestBed, TestBed } from '@angular/core/testing';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { of } from 'rxjs';
 import { Category } from '../../../../interfaces';
+import { CategoryService } from './category.service';
+
 
 const afsCollectionHelper = (snapshotChangesData: any[]) => {
   const data = snapshotChangesData.map((val, i) => {

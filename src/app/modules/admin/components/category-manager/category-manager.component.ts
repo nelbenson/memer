@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../../../game/services';
 import { Category } from '../../../../interfaces';
+import { CategoryService } from '../../../game/services';
 
 @Component({
   selector: 'memer-category-manager',

@@ -3,11 +3,11 @@
 
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
-import * as firebase from 'firebase/app';
-import { OnlineStatus, Presence } from '../../../../interfaces/OnlineStatus';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
-import { User } from '../../../../interfaces';
+import * as firebase from 'firebase/app';
 import { Observable, Subscription } from 'rxjs';
+import { User } from '../../../../interfaces';
+import { OnlineStatus, Presence } from '../../../../interfaces/OnlineStatus';
 
 @Injectable({
   providedIn: 'root'

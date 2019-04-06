@@ -1,9 +1,9 @@
 
-import { tap, map, take } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
-import { UserService } from '../modules/core/services';
+import { ActivatedRouteSnapshot, CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map, take, tap } from 'rxjs/operators';
+import { UserService } from '../modules/core/services';
 
 @Injectable()
 export class ProfileGuard implements CanActivate {

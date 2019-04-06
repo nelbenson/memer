@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PlayerListComponent } from './player-list.component';
+import { ClarityModule } from '@clr/angular';
+import { Player } from '../../../../../interfaces';
 import { Theme, ThemeService } from '../../../../core/services';
 import { ActivePlayersPipe } from '../../../pipes';
-import { ClarityModule } from '@clr/angular';
 import { PlayerScoreComponent } from '../../player-score/player-score.component';
-import { Player } from '../../../../../interfaces';
+import { PlayerListComponent } from './player-list.component';
+
 
 describe('PlayerListComponent', () => {
   let component: PlayerListComponent;
@@ -15,7 +15,7 @@ describe('PlayerListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ClarityModule],
-      declarations: [ PlayerListComponent, ActivePlayersPipe, PlayerScoreComponent ],
+      declarations: [PlayerListComponent, ActivePlayersPipe, PlayerScoreComponent],
       providers: [
         {
           provide: ThemeService,
@@ -23,7 +23,7 @@ describe('PlayerListComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -31,7 +31,7 @@ describe('PlayerListComponent', () => {
     component = fixture.componentInstance;
     component.players = [];
     component.turn = 'player 1',
-    component.isHost = false;
+      component.isHost = false;
     component.hostId = 'player 2';
     component.pointsToWin = 10;
 

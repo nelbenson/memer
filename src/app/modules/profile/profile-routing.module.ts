@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './components';
+import { RouterModule, Routes } from '@angular/router';
 import { ProfileGuard } from '../../guards';
+import { ProfileComponent } from './components';
 
 const routes: Routes = [
   { path: ':id', component: ProfileComponent, canActivate: [ProfileGuard] }

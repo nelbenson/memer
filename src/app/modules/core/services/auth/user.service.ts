@@ -1,10 +1,10 @@
-import { switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import * as firebase from 'firebase/app';
 import { Observable, of } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { Player, User } from '../../../../interfaces';
-import { AngularFirestoreDocument, AngularFirestore, DocumentReference } from 'angularfire2/firestore';
 import { PresenceService } from '../presence/presence.service';
 
 @Injectable({

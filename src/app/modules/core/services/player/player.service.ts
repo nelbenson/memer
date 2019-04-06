@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAction } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { map, filter, take, takeWhile } from 'rxjs/operators';
-import { Player, PlayerChanges, Card, GameJoinedResult } from '../../../../interfaces';
+import { map } from 'rxjs/operators';
+import { Card, GameJoinedResult, Player, PlayerChanges } from '../../../../interfaces';
 
 @Injectable({
   providedIn: 'root'

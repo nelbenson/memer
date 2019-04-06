@@ -1,12 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, Subject, combineLatest } from 'rxjs';
-import { filter, take, map, skip, takeUntil } from 'rxjs/operators';
-import get from 'lodash/get';
-import { Player, Game, Card, GameChanges, PlayerChanges, RoundType, Meme, Round } from '../../../../interfaces';
-import { Theme, UserService, ThemeService, GameService, PlayerService, PresenceService } from '../../../core/services';
-import { ChatService, DeckService, GiphyService, CategoryService, RoundPickerService } from '../../services';
 import * as firebase from 'firebase/app';
+import get from 'lodash/get';
+import { combineLatest, Observable, Subject } from 'rxjs';
+import { filter, map, skip, take, takeUntil } from 'rxjs/operators';
+import { Card, Game, GameChanges, Meme, Player, PlayerChanges, Round, RoundType } from '../../../../interfaces';
+import { GameService, PlayerService, PresenceService, Theme, ThemeService, UserService } from '../../../core/services';
+import { CategoryService, ChatService, DeckService, GiphyService, RoundPickerService } from '../../services';
 
 @Component({
   selector: 'memer-gameroom',
@@ -123,8 +123,8 @@ export class GameroomComponent implements OnInit, AfterViewInit, OnDestroy {
         this.beginStandardTurn(round);
         break;
       case RoundType.Reverse:
-      const lastUpdated = firebase.firestore.FieldValue.serverTimestamp();
-      this.gameService.updateGame({ lastUpdated, round });
+        const lastUpdated = firebase.firestore.FieldValue.serverTimestamp();
+        this.gameService.updateGame({ lastUpdated, round });
     }
   }
 

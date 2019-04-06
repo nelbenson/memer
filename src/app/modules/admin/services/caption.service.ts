@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-import { Card } from '../../../interfaces';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Card } from '../../../interfaces';
 // import { cards } from '../../../data/cards';
 
 @Injectable({

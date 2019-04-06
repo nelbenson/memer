@@ -1,9 +1,9 @@
 
-import { tap, map, take } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { GameService } from '../modules/core/services';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map, take, tap } from 'rxjs/operators';
+import { GameService } from '../modules/core/services';
 
 @Injectable()
 export class GameGuard implements CanActivate {

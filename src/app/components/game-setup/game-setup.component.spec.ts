@@ -1,9 +1,9 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-
-import { GameSetupComponent } from './game-setup.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { GameService } from '../../modules/core/services';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { GameSetupComponent } from './game-setup.component';
+
 
 describe('GameSetupComponent', () => {
   let component: GameSetupComponent;
@@ -21,9 +21,9 @@ describe('GameSetupComponent', () => {
           useValue: gameService
         }
       ],
-      declarations: [ GameSetupComponent ]
+      declarations: [GameSetupComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
   }));
 

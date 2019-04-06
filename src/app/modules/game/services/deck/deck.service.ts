@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument
-} from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import chunk from 'lodash/chunk';
+import shuffle from 'lodash/shuffle';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Game, Card, Player } from '../../../../interfaces';
+import { Card, Game } from '../../../../interfaces';
 import { CaptionService } from '../../../admin/services/caption.service';
-import shuffle from 'lodash/shuffle';
-import chunk from 'lodash/chunk';
 
 @Injectable({
   providedIn: 'root'

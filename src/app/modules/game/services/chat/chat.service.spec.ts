@@ -1,9 +1,9 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { ChatService } from './chat.service';
+import { inject, TestBed } from '@angular/core/testing';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { of } from 'rxjs';
 import { Message } from '../../../../interfaces';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { ChatService } from './chat.service';
+
 
 describe('ChatService', () => {
   const data: Message[][] = [[

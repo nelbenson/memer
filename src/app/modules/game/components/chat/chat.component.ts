@@ -1,8 +1,8 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
 import { Message, Player } from '../../../../interfaces';
 import { UserService } from '../../../core/services';
 import { ChatService } from '../../services';
-import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'memer-chat',
